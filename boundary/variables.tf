@@ -1,13 +1,13 @@
-variable "aws_default_tags" {
+variable "azure_default_tags" {
   type        = map(string)
-  description = "Default tags added to all AWS resources."
+  description = "Default tags added to all Azure resources."
   default = {
     Project = "getting-into-boundary"
   }
 }
 
-variable "aws_default_region" {
+variable "azure_location" {
   type        = string
-  description = "The default region that all resources will be deployed into."
-  default     = "us-east-1"
+  description = "The Azure region that all resources will be deployed into."
+  default     = "west-europe"
 }
