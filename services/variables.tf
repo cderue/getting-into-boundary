@@ -4,18 +4,23 @@ variable "project_name" {
   default     = "getting-into-boundary-services"
 }
 
-variable "aws_default_tags" {
+variable "azure_default_tags" {
   type        = map(string)
-  description = "Default tags added to all AWS resources."
+  description = "Default tags added to all Azure resources."
   default = {
     Project = "getting-into-boundary-services"
   }
 }
 
-variable "aws_default_region" {
+variable "resource_group_name" {
+  type        = string
+  description = "The name of the Azure resource group."
+}
+
+variable "azure_default_region" {
   type        = string
   description = "The default region that all resources will be deployed into."
-  default     = "us-east-1"
+  default     = "west-europe"
 }
 
 variable "default_container_image" {
@@ -30,7 +35,7 @@ variable "ui_service_name" {
   default     = "ui"
 }
 
-variable "eks_cluster_name" {
+variable "aks_cluster_name" {
   type        = string
   description = "The name of the EKS cluster."
 }

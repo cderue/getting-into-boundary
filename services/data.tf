@@ -12,6 +12,8 @@ data "terraform_remote_state" "infrastructure" {
 }
 
 locals {
-  eks_cluster_name = try(data.terraform_remote_state.infrastructure.outputs.eks_cluster_name, var.eks_cluster_name)
+  aks_cluster_name = try(data.terraform_remote_state.infrastructure.outputs.aks_cluster_name, var.aks_cluster_name)
+  resource_group_name = try(data.terraform_remote_state.infrastructure.outputs.resource_group_name, var.resource_group_name)
   public_subnet_ids = try(data.terraform_remote_state.infrastructure.outputs.public_subnet_ids, var.public_subnet_ids)
 }
+
