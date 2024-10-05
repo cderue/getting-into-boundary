@@ -1,3 +1,4 @@
+/*
 # Create an IAM role for the EKS cluster
 resource "aws_iam_role" "eks_cluster" {
   name = "${var.project_name}-eks-cluster"
@@ -150,3 +151,4 @@ resource "aws_iam_policy" "aws_lb_controller" {
   description = "Policy for AWS Load Balancer Controller"
   policy      = data.aws_iam_policy_document.aws_lb_controller.json
 }
+*/

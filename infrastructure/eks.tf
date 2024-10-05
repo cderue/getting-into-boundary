@@ -1,4 +1,4 @@
-resource "aws_eks_cluster" "cluster" {
+/*resource "aws_eks_cluster" "cluster" {
   name     = "${var.project_name}-cluster"
   role_arn = aws_iam_role.eks_cluster.arn
 
@@ -56,4 +56,4 @@ resource "aws_eks_node_group" "node_group" {
   tags = {
     "boundary" = "hosts"
   }
-}
+}*/

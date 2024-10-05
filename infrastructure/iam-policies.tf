@@ -1,4 +1,4 @@
-resource "aws_iam_policy" "fluent_bit" {
+/*resource "aws_iam_policy" "fluent_bit" {
   name        = "FluentBitCloudWatchLogs"
   description = "Allows Fluent Bit to write to CloudWatch Logs"
 
@@ -322,3 +322,4 @@ data "aws_iam_policy_document" "aws_lb_controller" {
     ]
   }
 }
+*/
