@@ -1,8 +1,8 @@
 terraform {
   required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.62.0"
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~> 3.74.0"
     }
     random = {
       source  = "hashicorp/random"
@@ -11,11 +11,8 @@ terraform {
   }
 }
 
-provider "aws" {
-  region = var.aws_default_region
-  default_tags {
-    tags = var.aws_default_tags
-  }
+provider "azurerm" {
+  features {}
 }
 
 provider "random" {}
