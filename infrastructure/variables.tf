@@ -4,21 +4,27 @@ variable "project_name" {
   default     = "getting-into-boundary"
 }
 
-variable "aws_default_tags" {
+variable "azure_default_tags" {
   type        = map(string)
-  description = "Default tags added to all AWS resources."
+  description = "Default tags added to all Azure resources."
   default = {
     Project = "getting-into-boundary"
   }
 }
 
-variable "aws_default_region" {
+variable "azure_location" {
   type        = string
-  description = "The default region that all resources will be deployed into."
-  default     = "us-east-1"
+  description = "The Azure region that all resources will be deployed into."
+  default     = "west-europe"
 }
 
-variable "vpc_cidr_block" {
+variable "deployment-environment" {
+  type        = string
+  description = "The deployment environment on Azure that all resources will be deployed into."
+  default     = "demo"
+}
+
+variable "vnet_cidr_block" {
   type        = string
   description = "Cidr block for the VPC."
   default     = "10.0.0.0/16"
@@ -35,11 +41,11 @@ variable "remote_access_cidr_block" {
   default     = "0.0.0.0/0"
 }
 
-variable "eks_cluster_version" {
-  type        = string
-  description = "The version of Kubernetes for EKS to use."
-  default     = "1.29"
-}
+#variable "aks_cluster_version" {
+#  type        = string
+#  description = "The version of Kubernetes for EKS to use."
+#  default     = "1.29"
+#}
 
 # Boundary Variables
 
